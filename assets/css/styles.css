@@ -1,0 +1,119 @@
+/* GENERAL STYLES */
+:root{
+  --bg-layout: whitesmoke;
+  --bg-day: white;
+  --color-shadow: #a8a8a8;
+  
+  --bg-breakfast: #FAF9EE;
+  --breakfast-dark:#949174;
+  
+  --bg-brunch: #bebb97;
+  --brunch-dark:#6e6e52;
+  
+  --bg-lunch: #A2AF9B;
+  --lunch-dark:#576351;
+  
+  --bg-snack: #DCCFC0;
+  --snack-dark:#665c51;
+  
+  --bg-dinner: #EEEEEE;
+  --dinner-dark:#6e6e6e;
+}
+
+html{
+  font-size: 10px;
+}
+
+body{
+  font-size: 1.4rem;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: var(--bg-layout);
+}
+.week-planner{
+  height: calc(100vh - 30px);
+  display: grid;
+  grid-template-rows: auto;
+  align-items: stretch;
+  justify-items: stretch;
+  grid-gap: 2rem;
+  margin: 1.5rem;
+}
+.week-planner__day{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  background-color: var(--bg-day);
+  border-radius: 1.2rem;
+  padding: 1rem ;
+}
+/* .week-planner__day--today{
+  border: 4px solid lightseagreen;
+} */
+.day__header{
+  margin-left: 1.2rem;
+}
+.day__title{
+  font-size: 2rem;
+}
+.day__date{
+  color: var(--color-shadow);
+  font-weight: bold;
+}
+.day__meals{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  gap: 1.5rem;
+}
+.meals__container{
+  height: 100%;
+  padding: 0.8rem 1.2rem;
+  border-radius: 1rem;
+}
+.meals__breakfast{
+  background-color: var(--bg-breakfast);
+  color: var(--breakfast-dark);
+}
+.meals__brunch{
+  background-color: var(--bg-brunch);
+  color: var(--brunch-dark);
+}
+.meals__lunch{
+  background-color: var(--bg-lunch);
+  color: var(--lunch-dark);
+}
+.meals__snack{
+  background-color: var(--bg-snack);
+  color: var(--snack-dark);
+}
+.meals__dinner{
+  background-color: var(--bg-dinner);
+  color: var(--dinner-dark);
+}
+.meals__title{
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.meal__container{
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  padding-right: 3rem ;
+  position: relative;
+}
+.meal__delete{
+  font-size: 1.6rem;
+  position: absolute;
+  top: 1.1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.meal__delete:hover{
+  color: black;
+}
