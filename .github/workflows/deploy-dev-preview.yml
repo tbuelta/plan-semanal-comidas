@@ -1,0 +1,27 @@
+name: Deploy dev preview
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create dev folder
+        run: |
+          mkdir build
+          cp -r * build/ || true
+          mkdir -p build/dev
+          cp -r * build/dev/ || true
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
