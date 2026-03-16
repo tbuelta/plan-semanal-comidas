@@ -1,0 +1,20 @@
+@media (min-width:480px) {
+  .week-planner{
+    grid-template-columns: 1fr 1fr ;
+  }
+}
+@media (min-width:768px) {
+  .week-planner{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media (min-width:1024px) {
+  .week-planner{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+@media (min-width:1440px) {
+  .week-planner{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
